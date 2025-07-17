@@ -1,7 +1,8 @@
 
 # ✅ ToDo Application
 
-A full-stack **ToDo Web App** developed using **Spring Boot (Java)** for the backend and **React with Vite + Tailwind CSS** for the frontend. It allows users to manage tasks with full **CRUD functionality**, including optional descriptions.
+A full-stack To-Do List Web App built using Spring Boot (Java), MySQL, React (Vite), and Tailwind CSS.
+This application provides full CRUD operations, optional task descriptions, task completion toggling, and a powerful search feature - all wrapped in a clean, modern UI.
 
 ---
 
@@ -10,6 +11,7 @@ A full-stack **ToDo Web App** developed using **Spring Boot (Java)** for the bac
 - ✅ Create, Read, Update, Delete tasks
 - 📝 Optional description for each task
 - ✅ Mark tasks as complete/incomplete
+- 🔍 Search To-Do items by keyword (title or description)
 - 🎨 Beautiful UI with Tailwind CSS
 - 🔄 REST API built with Spring Boot
 - 🧪 API tested using Postman
@@ -40,27 +42,27 @@ A full-stack **ToDo Web App** developed using **Spring Boot (Java)** for the bac
 ## 🗂️ Project Structure
 
 ```
-todoapp/
-├── backend/
-│   ├── model/
-│   ├── controller/
-│   ├── repository/
-│   ├── service/
-│   ├── application.properties
-│   └── TodoAppApplication.java
-├── frontend/
-│   ├── src/
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   └── vite.config.js
-```
+├── todoapp
+│   ├── controller
+│   ├── model
+│   ├── repository
+│   └── service
+├── todo-frontend
+│   ├── components
+│   │   ├── TaskForm.jsx
+│   │   ├── TaskItem.jsx
+│   │   ├── TaskList.jsx
+│   │   ├── EditModal.jsx
+│   │   └── SearchBar.jsx
+│   └── App.jsx
+````
 
 ---
 
 ## 📷 UI Screenshots
 
-<img width="1501" height="855" alt="image" src="https://github.com/user-attachments/assets/21f9d422-23a8-4f0a-9062-258636ad8ada" />
-<img width="1347" height="788" alt="image" src="https://github.com/user-attachments/assets/3cdcff58-7265-4393-80f2-ab8a1e7fd1a3" />
+<img width="1197" height="827" alt="image" src="https://github.com/user-attachments/assets/0c312db3-c765-4c53-8546-199d98aa7bf7" />
+<img width="1162" height="817" alt="image" src="https://github.com/user-attachments/assets/c62b5344-2754-4484-adf8-56d0045e3a30" />
 
 ---
 
