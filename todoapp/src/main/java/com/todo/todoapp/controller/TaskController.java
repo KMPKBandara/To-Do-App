@@ -29,7 +29,7 @@ public class TaskController {
 
     @PutMapping("/{id}")
     public Task update(@PathVariable Long id, @RequestBody Task task) {
-        task.setId(id); // ✅ This now works!
+        task.setId(id);
         return service.updateTask(task);
     }
 
