@@ -2,9 +2,11 @@ package com.todo.todoapp.controller;
 
 import com.todo.todoapp.model.Task;
 import com.todo.todoapp.service.TaskService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin(origins = "*")
 @RestController
@@ -20,6 +22,18 @@ public class TaskController {
     @GetMapping
     public List<Task> getAll() {
         return service.getAllTasks();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Task> getById(@PathVariable Long id) {
+        Optional<Task> task = service.getTaskById(id);
+        return task.map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/search")
+    public List<Task> searchTasks(@RequestParam String keyword) {
+        return service.searchTasks(keyword);
     }
 
     @PostMapping
